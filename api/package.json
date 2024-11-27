@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "autocannon": "^7.15.0",
+    "bcryptjs": "^2.4.3",
+    "clinic": "^13.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.3",
+    "multer": "^1.4.5-lts.1",
+    "supertest": "^7.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+     "load-test": "clinic doctor --on-port 'autocannon -r 100 -c 100 -d 10 localhost:3000' -- node index.js",
+     "b": "clinic bubbleprof --on-port 'autocannon -r 1000 -c 1 -d 10 localhost:3000' -- node index.js"
+    
+  }
+}
